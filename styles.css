@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Inter-Medium";
+  font-style: medium;
+  font-weight: 500;
+  src: url("../fonts/Inter-Bold.otf") format("otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/Inter-Medium.otf") format("otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlusJakartaSans";
+  font-style: medium;
+  font-weight: 500;
+  src: url("../fonts/PlusJakartaSans-Medium.ttf") format("ttf");
+  font-display: swap;
+}
+
+body {
+  /* position: absolute;*/
+  height: 100%;
+
+  background: linear-gradient(180deg, #2567e8 0%, #1ce6da 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -1%;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 343px;
+
+  margin: -336px 0 0 -171.5px;
+  /* padding: 24px; */
+
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.container {
+  margin: 24px;
+}
+.hidden {
+  display: none;
+}
+
+.main-header__heading {
+  margin: 0;
+  margin-top: 20px;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: -2%;
+}
+.main-header__description {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: -1%;
+}
+.to-login {
+  color: #375dfb;
+  text-decoration: none;
+}
+label,
+input[type="submit"] {
+  display: block;
+  font-family: "PlusJakartaSans", sans-serif;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+input {
+  width: 283px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 2px 5px;
+  border: 1px solid #edf1f3;
+  border-radius: 10px;
+}
+input[type="submit"] {
+  border: none;
+  /* padding: 0; */
+  width: 295px;
+  height: 48px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #1d61e7;
+  box-shadow: 0px 1px 2px rgba(37, 62, 167, 0.48), 0px 0px 0px 1px #375dfb;
+  color: #ffffff;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url(../images/calendar-due.png);
+  cursor: pointer;
+}
+.password__container {
+  position: relative;
+}
+.password__container::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 270px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/eye-off.png);
+
+  background-size: cover;
+}
+.variant {
+  position: relative;
+  text-align: center;
+}
+.variant::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 0px;
+  top: 10px;
+  width: 110px;
+  height: 2px;
+
+  background: rgba(67, 43, 43, 0.3);
+}
+.variant::before {
+  content: "";
+  position: absolute;
+  right: 22px;
+
+  top: 10px;
+  width: 110px;
+  height: 2px;
+
+  background: rgba(67, 43, 43, 0.3);
+}
+.btn {
+  /* padding: 0; */
+  width: 295px;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+}
+.btn-google {
+  position: relative;
+  margin-top: 20px;
+}
+.btn-google::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 55px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/google.png);
+
+  background-size: cover;
+}
+.btn-facebook {
+  position: relative;
+
+  margin-top: 20px;
+}
+.btn-facebook::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 55px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/facebook.png);
+
+  background-size: cover;
+}
+input[type="submit"] .btn {
+  background-color: rgb(202, 202, 202);
+}
+/* LOGIN */
+.page-header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.page-header__description {
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: -2%;
+}
