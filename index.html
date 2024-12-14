@@ -2,10 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/styles.css" />
 
-    <link rel="stylesheet" href="styles.css" />
-    <script src="js/main.js"></script>
-    <title>Управление автозаполнением полей</title>
+    <script src="./js/main.js"></script>
+
+    <title>Форма регистрации</title>
   </head>
   <body>
     <header class="page-header hidden">Форма авторизации</header>
@@ -56,13 +60,17 @@
               pattern="\d{4}-\d{2}-\d{2}"
               required />
           </div>
+          <div class="phone__container">
+            <label for="tel" class="tel__label">Phone Number</label>
 
-          <label for="tel" class="tel__label">Phone Number</label>
-          <input
-            type="tel"
-            id="tel"
-            name="tel"
-            pattern="([0-9]{3})[0-9]{3}-[0-9]{4}" />
+            <input
+              type="tel"
+              id="tel"
+              name="tel"
+              class="tel"
+              pattern="([0-9]{3})[0-9]{3}-[0-9]{4}" />
+          </div>
+
           <div class="password__container">
             <label for="password" class="password__label">Set Password</label>
             <input type="password" id="password" />

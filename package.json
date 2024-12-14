@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "intl-tel-input": "^25.2.0",
+    "save": "^2.9.0"
+  }
+}

@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "Inter-Medium";
+  font-style: medium;
+  font-weight: 500;
+  src: url("../fonts/Inter-Bold.otf") format("otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/Inter-Medium.otf") format("otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlusJakartaSans";
+  font-style: medium;
+  font-weight: 500;
+  src: url("../fonts/PlusJakartaSans-Medium.ttf") format("ttf");
+  font-display: swap;
+}
+
+body {
+  /* position: absolute;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background: linear-gradient(180deg, #2567e8 0%, #1ce6da 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -1%;
+  color: #1a1c1e;
+}
+
+main {
+  width: 343px;
+
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.container {
+  margin: 24px;
+}
+.hidden {
+  display: none;
+}
+
+.main-header__heading {
+  margin: 0;
+  margin-top: 24px;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: -2%;
+  color: #111827;
+}
+.main-header__description {
+  margin: 0;
+  margin-top: 12px;
+  margin-bottom: 24px;
+
+  color: #6c7278;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: -1%;
+}
+.to-login,
+.new-password {
+  color: #4d81e7;
+  text-decoration: none;
+
+  font-weight: 600;
+  font-size: 12px;
+}
+label {
+  margin-bottom: 2px;
+}
+label:not(.remember input) {
+  /* display: block; */
+
+  font-family: "PlusJakartaSans", sans-serif;
+  color: #6c7278;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+
+input {
+  width: 274px;
+  height: 40px;
+  margin-bottom: 16px;
+  padding: 2px 14px;
+  border: 1px solid #edf1f3;
+  border-radius: 10px;
+
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  outline: none;
+}
+/* #phone {
+  width: 293px;
+} */
+input[type="submit"] {
+  border: none;
+  /* padding: 0; */
+  width: 295px;
+  height: 48px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #1d61e7;
+  box-shadow: 0px 1px 2px rgba(37, 62, 167, 0.48), 0px 0px 0px 1px #375dfb;
+  color: #ffffff;
+}
+.data__container {
+  position: relative;
+}
+.data__container::after {
+  position: absolute;
+  content: "";
+  bottom: 31px;
+  left: 265px;
+  width: 16px;
+  height: 16px;
+
+  background-size: cover;
+  background: url(../images/calendar.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.password__container {
+  position: relative;
+  margin-bottom: 24px;
+}
+.password__container::after {
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 265px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/eye-off.svg);
+
+  background-size: cover;
+}
+.password__container input {
+  margin: 0;
+}
+.register,
+.login {
+  cursor: pointer;
+}
+.variant {
+  position: relative;
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  color: #6c7278;
+}
+.variant::after {
+  content: "";
+  position: absolute;
+
+  width: 124.5px;
+  height: 0px;
+
+  left: 0;
+  top: 9px;
+
+  border: 1px solid #edf1f3;
+}
+.variant::before {
+  content: "";
+  position: absolute;
+
+  width: 124.5px;
+  height: 0px;
+
+  right: 0;
+  top: 9px;
+
+  border: 1px solid #edf1f3;
+}
+.btn {
+  padding: 14px 61.5px 14px 89.5px;
+  width: 295px;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  color: #1a1c1e;
+  cursor: pointer;
+}
+.btn-google {
+  position: relative;
+  margin-top: 20px;
+}
+.btn-google::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 61.5px;
+  width: 18px;
+  height: 18px;
+  background: url(../images/google.svg);
+
+  background-size: cover;
+}
+.btn-facebook {
+  position: relative;
+  padding: 14px 52.5px 14px 80.5px;
+  margin-top: 20px;
+}
+.btn-facebook::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 52.5px;
+  width: 19px;
+  height: 18px;
+  background: url(../images/facebook.svg);
+
+  background-size: cover;
+}
+input[type="submit"] .btn {
+  background-color: rgb(202, 202, 202);
+}
+/* LOGIN */
+.header__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+.page-header__description {
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: -2%;
+}
+.remember {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+.remember label {
+  font-size: 12px;
+  line-height: 150%;
+  margin-top: 2px;
+  color: #6c7278;
+}
+
+input[type="checkbox"] {
+  width: 11px;
+  height: 11px;
+  margin: 4px;
+}
+.new-password {
+  margin-left: 83px;
+}
+select {
+  height: 50px;
+  line-height: 50px;
+  font-size: 40pt;
+}
+option {
+  border-radius: 50%;
+}
+.phone__container {
+  position: relative;
+}
+.phone__container::after {
+  position: absolute;
+  content: "";
+  top: 34px;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  background: url(../images/flags/united-kingdom.svg);
+
+  background-size: cover;
+}
+.phone__container {
+  position: relative;
+}
+.phone__container::before {
+  position: absolute;
+  content: "";
+  top: 37px;
+  left: 41px;
+  width: 12px;
+  height: 12px;
+  background: url(../images/arrow-down.svg);
+
+  background-size: cover;
+  cursor: pointer;
+}
+#tel {
+  padding-left: 70px;
+}
+#tel {
+  width: 218px;
+}
+.tel__label {
+  position: relative;
+}
+.tel__label::after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  left: 62px;
+  width: 1px;
+  height: 45px;
+
+  background: #edf1f3;
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    margin: 0;
+    margin-top: 70px;
+  }
+  main {
+    margin: 70px 14px;
+    margin-top: 0;
+  }
+}
