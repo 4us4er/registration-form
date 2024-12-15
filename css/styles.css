@@ -348,6 +348,22 @@ option {
   background: #edf1f3;
 }
 
+.error {
+  color: #e75c3c;
+  /* margin-top: 5px; */
+  visibility: hidden;
+}
+.input-field.invalid .error {
+  visibility: visible;
+}
+
+.input-field.invalid input {
+  border-color: #e75c3c;
+}
+
+.input-field.valid input {
+  border-color: #2ecc71;
+}
 @media screen and (min-width: 320px) {
   body {
     margin: 0;

@@ -7,8 +7,6 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="./css/styles.css" />
 
-    <script src="./js/main.js"></script>
-
     <title>Форма регистрации</title>
   </head>
   <body>
@@ -39,16 +37,23 @@
             <a href="./login.html" class="to-login">Login</a>
           </p>
         </div>
-        <form method="post">
-          <label for="full-name" class="full-name__label">Full name</label>
-          <input
-            type="text"
-            id="full-name"
-            name="full-name"
-            class="full-name" />
-          <label for="email" class="email__label">Email</label>
-          <input type="email" id="email" name="email" />
-          <div class="data__container">
+        <form method="post" id="form">
+          <div class="input-field">
+            <label for="full-name" class="full-name__label">Full name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              class="full-name"
+              required />
+            <div id="name-error" class="error"></div>
+          </div>
+          <div class="input-field">
+            <label for="email" class="email__label">Email</label>
+            <input type="email" id="email" name="email" required />
+            <div id="name-error" class="error"></div>
+          </div>
+          <div class="data__container input-field">
             <label for="birth-day" class="birth-day__label"
               >Birth of date</label
             >
@@ -59,8 +64,9 @@
               name="birth-day"
               pattern="\d{4}-\d{2}-\d{2}"
               required />
+            <div id="name-error" class="error"></div>
           </div>
-          <div class="phone__container">
+          <div class="phone__container input-field">
             <label for="tel" class="tel__label">Phone Number</label>
 
             <input
@@ -68,16 +74,24 @@
               id="tel"
               name="tel"
               class="tel"
-              pattern="([0-9]{3})[0-9]{3}-[0-9]{4}" />
+              pattern="([0-9]{3})[0-9]{3}-[0-9]{4}"
+              required />
+            <div id="name-error" class="error"></div>
           </div>
 
-          <div class="password__container">
+          <div class="password__container input-field">
             <label for="password" class="password__label">Set Password</label>
-            <input type="password" id="password" />
+            <input type="password" id="password" required />
+            <div id="name-error" class="error"></div>
           </div>
-          <input type="submit" value="Register" class="register" />
+          <input
+            type="submit"
+            value="Register"
+            class="register"
+            id="form-button" />
         </form>
       </div>
     </main>
+    <script src="./js/main.js"></script>
   </body>
 </html>
